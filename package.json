@@ -1,0 +1,27 @@
+{
+  "name": "image-canvas-ops",
+  "version": "1.0.0",
+  "description": "Resizes and rotates an image via a canvas element.",
+  "main": "index.js",
+  "private": false,
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:jimkang/image-canvas-ops.git"
+  },
+  "keywords": [
+    "browser",
+    "image",
+    "canvas"
+  ],
+  "author": "Jim Kang",
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/jimkang/image-canvas-ops/issues"
+  },
+  "homepage": "https://github.com/jimkang/image-canvas-ops",
+  "devDependencies": {
+    "eslint": "^7.2.0"
+  },
+  "dependencies": {}
+}
