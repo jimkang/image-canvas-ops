@@ -24,32 +24,32 @@ Then, you'll get an object with the following methods:
 - `rotateImage`: Rotates the image in the canvas by 90 degrees clockwise.
 - `clearCanvases`: Removes images from the main and thumbnail canvases.
 
-    var ImageCanvasOps = require('image-canvas-ops');
+        var ImageCanvasOps = require('image-canvas-ops');
 
-    var imageCanvasOps = ImageCanvasOps({
-      canvas: document.getElementById('main-manipulation-canvas'),
-      thumbnailCanvas: document.getElementById('thumbnail-cnvas')
-    });
+        var imageCanvasOps = ImageCanvasOps({
+          canvas: document.getElementById('main-manipulation-canvas'),
+          thumbnailCanvas: document.getElementById('thumbnail-cnvas')
+        });
 
-    imageCanvasOps.loadFileToCanvas({
-      mimeType: 'image/jpeg',
-      maxSideLength: 1024,
-      file: fileFromInput
-    });
-    // Flip 180 degrees.
-    for (var i = 0; i < 2; ++i) {
-      imageCanvasOps.rotateImage();
-    }
+        imageCanvasOps.loadFileToCanvas({
+          mimeType: 'image/jpeg',
+          maxSideLength: 1024,
+          file: fileFromInput
+        });
+        // Flip 180 degrees.
+        for (var i = 0; i < 2; ++i) {
+          imageCanvasOps.rotateImage();
+        }
 
-    imageCanvasOps.getImageFromCanvas(useModifiedImage);
+        imageCanvasOps.getImageFromCanvas(useModifiedImage);
 
-    function useModifiedImage(error, resizedAndRotatedImageBlob) {
-      if (error) {
-        console.error(error, error.stack);
-      } else {
-        postImageToAPI(resizedAndRotatedImageBlob);
-      }
-    }
+        function useModifiedImage(error, resizedAndRotatedImageBlob) {
+          if (error) {
+            console.error(error, error.stack);
+          } else {
+            postImageToAPI(resizedAndRotatedImageBlob);
+          }
+        }
 
 ## License
 
