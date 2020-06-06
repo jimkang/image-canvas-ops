@@ -86,7 +86,6 @@ function ImageCanvasOps({ canvas, thumbnailCanvas }) {
     var oldHeight = canvas.height;
     canvas.width = oldHeight;
     canvas.height = oldWidth;
-    console.log(canvas.width, canvas.height);
     var angle = (rotations * Math.PI) / 2;
     ctx.translate(canvas.width / 2, canvas.height / 2);
     ctx.rotate(angle);
