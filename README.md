@@ -15,10 +15,12 @@ You need to provide to the constructor:
 
 Then, you'll get an object with the following methods:
 
-- `loadFileToCanvas`: Loads a file into the canvas. Takes these opts in an object:
+- `loadFileToCanvas`: Loads a file into the canvas.
+  - Takes these opts in an object as the first param:
     - `mimeType`: e.g. 'image/jpeg' or 'image/png'
     - `maxSideLength`: A pixel size. The method will resize the image to fit within a square with with sizes of this length — without stretching the image.
     - `file`: A [File object](https://developer.mozilla.org/en-US/docs/Web/API/File) like the kind you get from an `<input type="file">` file picker element.
+  - The optional second param is a callback that takes an error as its param if loading did not go right, nothing if everything loaded fine.
 - `getImageFromCanvas`: Copies the image out from the canvas and passes it to the callback you provide it. Use this to get the resized image from an image you loaded to the canvas or to get the rotate image after using `rotateImage`. The first param of the callback is an error, if there was an error while getting the image. The second parameter is a Blob representing the image.
 - `canvasHasImage`: Tells you if an image is loaded into the canvas.
 - `rotateImage`: Rotates the image in the canvas by 90 degrees clockwise.

@@ -30,7 +30,7 @@ function ImageCanvasOps({ canvas, thumbnailCanvas }) {
   var loadedImageMIMEType;
   var imageIsLoaded = false;
 
-  function loadFileToCanvas({ mimeType, maxSideLength, file }) {
+  function loadFileToCanvas({ mimeType, maxSideLength, file }, done) {
     img = new Image();
     img.addEventListener('load', drawToCanvas);
     img.src = URL.createObjectURL(file);
@@ -56,6 +56,10 @@ function ImageCanvasOps({ canvas, thumbnailCanvas }) {
 
       loadedImageMIMEType = mimeType;
       imageIsLoaded = true;
+
+      if (done) {
+        done();
+      }
     }
   }
 
