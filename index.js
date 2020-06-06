@@ -58,7 +58,7 @@ function ImageCanvasOps({ canvas, thumbnailCanvas }) {
       imageIsLoaded = true;
 
       if (done) {
-        done();
+        setTimeout(done, 0);
       }
     }
   }
