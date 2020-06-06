@@ -28,7 +28,7 @@ Then, you'll get an object with the following methods:
 
         var imageCanvasOps = ImageCanvasOps({
           canvas: document.getElementById('main-manipulation-canvas'),
-          thumbnailCanvas: document.getElementById('thumbnail-cnvas')
+          thumbnailCanvas: document.getElementById('thumbnail-canvas')
         });
 
         imageCanvasOps.loadFileToCanvas({
